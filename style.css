@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fbfcfe;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  border: 3px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.code {
+  font-size: 75px;
+  text-align: center;
+  height: 120px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 0 10px;
+  border: 1px solid lightgray;
+  font-weight: 300px;
+  /* to get rid of sort icons in firefox */
+  -moz-appearance: textfield;
+}
+
+/* to get rid of sort icons in safari and in chrome */
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code:valid {
+  border-color: lightseagreen;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.info {
+  background-color: #eaeaea;
+  display: inline-block;
+  padding: 10px;
+  line-height: 20px;
+  max-width: 400px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .code-container {
+    flex-wrap: wrap;
+  }
+  .code {
+    font-size: 54px;
+    height: 80px;
+  }
+}
